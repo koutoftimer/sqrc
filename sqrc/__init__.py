@@ -6,6 +6,7 @@ from PIL import Image
 
 
 __all__ = ['main', 'QR_FILE']
+__version__ = '0.0.2'
 
 
 # Temporary file will be placed in the same direcoty with executor.
