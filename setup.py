@@ -10,7 +10,7 @@ setuptools.setup(
     author_email="koutoftimer@gmail.com",
     description="SQRC (show QR code) is simple utility that takes data from the clipboard and shows you QR code.",
     install_requires=[
-        "clipboard==0.0.4",
+        "pyperclip==1.7.0",
         "Pillow==5.4.1",
         "qrcode==6.1"
     ],
