@@ -18,8 +18,7 @@ setuptools.setup(
                  'the clipboard and shows you QR code.'),
     install_requires=[
         'pyperclip==1.7.0',
-        'Pillow==5.4.1',
-        'qrcode==6.1'
+        'qrcode[pil]==6.1'
     ],
     license='GPLv3',
     long_description=long_description,
@@ -32,7 +31,12 @@ setuptools.setup(
 		'Intended Audience :: End Users/Desktop',
 		'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
 		'Operating System :: OS Independent',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Multimedia :: Graphics',
 		'Topic :: Utilities'
     ],
     data_files=[

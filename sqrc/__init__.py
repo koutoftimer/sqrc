@@ -1,23 +1,20 @@
 # -*- encoding: utf-8 -*-
 import os
-from qrcode import make
-from pyperclip import paste
+from tempfile import TemporaryFile
+
 from PIL import Image
+from pyperclip import paste
+from qrcode import make
 
 
-__all__ = ['main', 'QR_FILE']
-__version__ = '0.0.2'
-
-
-# Temporary file will be placed in the same direcoty with executor.
-BASE = os.path.dirname(__file__)
-QR_FILE = os.path.join(BASE, 'qr.png')
+__all__ = ['main']
+__version__ = '0.0.3'
 
 
 def main():
-    with open(QR_FILE, 'wb') as f:
-        make(paste()).save(f)
-    Image.open(QR_FILE).show()
+    f = TemporaryFile()
+    make(paste()).save(f)
+    Image.open(f).show()
 
 
 if __name__ == '__main__':
