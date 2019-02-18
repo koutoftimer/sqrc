@@ -39,7 +39,9 @@ Used Qt SDK version 5.12.1.
 
 1. Aquire source code with submodules:
 
-    $ git clone --recurse-submodules https://github.com/koutoftimer/sqrc.git
+```bash
+$ git clone --recurse-submodules https://github.com/koutoftimer/sqrc.git
+```
 
 2. Use `QtCreator` or any other way to build `c++/sqrc-qt/sqrc-qt.pro` project.
 
