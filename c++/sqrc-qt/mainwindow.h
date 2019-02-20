@@ -2,8 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QrCode.hpp>
-#include "QClipboard"
+#include <QListWidgetItem>
+
+#include "qsquarelayout.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,8 +21,15 @@ public:
 private slots:
     void on_generateButton_clicked();
 
+    void on_pushButtonClear_clicked();
+
+    void on_historyListWidget_itemActivated(QListWidgetItem *item);
+
 private:
     Ui::MainWindow *ui;
+    QVSquareLayout *qrLayout;
+
+    bool generateAndShow(const QString& text);
 };
 
 #endif // MAINWINDOW_H

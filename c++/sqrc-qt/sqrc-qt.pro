@@ -27,7 +27,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 DEPENDPATH  += "/home/ruslan/Programming/python/show-qr-code/c++/libs/QR-Code-generator/cpp"
 INCLUDEPATH += "/home/ruslan/Programming/python/show-qr-code/c++/libs/QR-Code-generator/cpp"
 
-
 CONFIG += c++11
 
 SOURCES += \
@@ -35,10 +34,12 @@ SOURCES += \
         mainwindow.cpp \
         ../libs/QR-Code-generator/cpp/QrCode.cpp \
         ../libs/QR-Code-generator/cpp/QrSegment.cpp \
-        ../libs/QR-Code-generator/cpp/BitBuffer.cpp
+        ../libs/QR-Code-generator/cpp/BitBuffer.cpp \
+        qsquarelayout.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+        qsquarelayout.h
 
 FORMS += \
         mainwindow.ui
