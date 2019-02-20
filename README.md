@@ -31,6 +31,8 @@ It is very unlikely to push some maleware into source code.
 
 # C++ version
 
+![C++ Qt version preview](https://user-images.githubusercontent.com/4004825/53089779-2eaaaa00-3516-11e9-9307-2b60f12802c2.jpg)
+
 You have to build it manually.
 
 ## Build guide
