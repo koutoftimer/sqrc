@@ -50,3 +50,10 @@ $ git clone --recurse-submodules https://github.com/koutoftimer/sqrc.git
    [pyperclip]: https://github.com/asweigart/pyperclip
    [qrcode]: https://github.com/lincolnloop/python-qrcode
    [pillow]: https://github.com/python-pillow/Pillow
+
+### Using Cmake and Unix Makefiles
+
+```bash
+$ cmake -DCMAKE_PREFIX_PATH=~/Qt/5.12.1/gcc_64/lib/cmake/ \
+        -G "Unix Makefiles" CMakeLists.txt
+```
