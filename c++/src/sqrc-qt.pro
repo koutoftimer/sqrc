@@ -22,12 +22,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-#INCLUDEPATH += "$$PWD/../libs/QR-Code-generator/cpp/"
-#INCLUDEPATH += . ../libs/QR-Code-generator/cpp
-DEPENDPATH  += "/home/ruslan/Programming/python/show-qr-code/c++/libs/QR-Code-generator/cpp"
-INCLUDEPATH += "/home/ruslan/Programming/python/show-qr-code/c++/libs/QR-Code-generator/cpp"
+DEPENDPATH  += "../libs/QR-Code-generator/cpp"
+INCLUDEPATH += "../libs/QR-Code-generator/cpp"
 
-CONFIG += c++11
+CONFIG += c++14 static-runtime static debug_and_release
 
 SOURCES += \
         main.cpp \
