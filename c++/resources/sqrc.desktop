@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=SQRC
+Comment=Generates QR from text in clipboard
+Exec=sqrc
+Icon=sqrc
