@@ -1,5 +1,6 @@
 [Desktop Entry]
 Type=Application
+Categories=Utility;TextTools
 Name=SQRC
 Comment=Generates QR from text in clipboard
 Exec=sqrc
