@@ -7,7 +7,11 @@ It is very helpfull for transfering text data into you smartphone via QR code re
 
 You have to build it manually or take a look at [Issues tab][issue-portable] it could be that executable for your OS has already been built.
 
-## Build guide
+## Build guide (outdated)
+
+**Update:** after switching to Qt6 I've only tested building from source using
+cmake. I've built AppImage using both `sh ./c++/build-app-image.sh` and `CPack` as
+suggested inside `./c++/CMakeLists.txt`.
 
 Used Qt SDK version 5.12.1.
 
