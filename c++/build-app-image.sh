@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Provide path to qmake for Qt5
-export QMAKE=/usr/lib64/qt5/bin/qmake
+# Provide custom path to qmake for Qt6 if you have qmake related errors
+# export QMAKE=/usr/lib64/qt6/bin/qmake
 
 die() {
     echo -e "\n\033[0;31m[ERROR]\033[0m $1" >&2

@@ -1,19 +1,24 @@
-project(binary)
-
-set(CMAKE_CXX_STANDARD 14)
+# https://doc.qt.io/qt-6/cmake-get-started.html
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_TYPE RELEASE)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 
-foreach(_COMPONENT Widgets Core Gui Svg)
-    find_package(Qt5${_COMPONENT} CONFIG REQUIRED)
-    list(APPEND qt_libs Qt5::${_COMPONENT})
+foreach(_COMPONENT Widgets Core Gui Svg SvgWidgets)
+    find_package(Qt6 CONFIG REQUIRED ${_COMPONENT})
+    list(APPEND qt_libs Qt6::${_COMPONENT})
 endforeach(_COMPONENT)
 
-set(sqrc_SRC mainwindow.ui mainwindow.cpp qsquarelayout.cpp main.cpp)
+qt_standard_project_setup()
 
-add_executable(sqrc ${sqrc_SRC})
-target_link_libraries(sqrc ${qt_libs} qrcodegen) 
+qt_add_executable(sqrc
+    mainwindow.ui mainwindow.cpp
+    qsquarelayout.cpp
+    main.cpp
+)
 
-install(TARGETS sqrc RUNTIME DESTINATION bin)
+target_link_libraries(sqrc PRIVATE ${qt_libs} qrcodegen)
+
+target_include_directories(sqrc PRIVATE ../libs/QR-Code-generator/cpp/)
