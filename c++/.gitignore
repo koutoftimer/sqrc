@@ -1,2 +1,4 @@
 .*
 *.AppImage
+appimagetool
+build/

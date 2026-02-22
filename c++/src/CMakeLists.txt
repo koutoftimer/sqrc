@@ -22,3 +22,17 @@ qt_add_executable(sqrc
 target_link_libraries(sqrc PRIVATE ${qt_libs} qrcodegen)
 
 target_include_directories(sqrc PRIVATE ../libs/QR-Code-generator/cpp/)
+
+install(TARGETS sqrc
+    BUNDLE  DESTINATION .
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+include(GNUInstallDirs)
+
+qt_generate_deploy_app_script(
+    TARGET sqrc
+    OUTPUT_SCRIPT deploy_script
+    NO_UNSUPPORTED_PLATFORM_ERROR
+)
+install(SCRIPT ${deploy_script})
